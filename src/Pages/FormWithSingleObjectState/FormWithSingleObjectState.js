@@ -5,17 +5,21 @@ import './FormWithSingleObjectState.css';
 
 function FormWithSingleObjectState() {
     const [persInfo, setPersInfo] = useState({
-        name: '',
+        fullName: '',
         age: '',
         email: '',
 
     })
     const [display, setDisplay] = useState('');
 
+    const handleInputChange=(e)=>{
+setPersInfo({...persInfo,[e.target.name]:e.target.value})
+    }
+
     // Function to handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        setDisplay(`${persInfo.name}, ${persInfo.age}, ${persInfo.email}`)
+        setDisplay(`${persInfo.fullName}, ${persInfo.age}, ${persInfo.email}`)
     };
 
     return (
@@ -25,27 +29,27 @@ function FormWithSingleObjectState() {
                     <label htmlFor="name">Name:</label>
                     <input
                         type="text"
-                        id="name"
+                        name="fullName"
                         value={persInfo.name}
-                        onChange={(e) => setPersInfo({ ...persInfo, name: e.target.value })}
+                        onChange={handleInputChange}
                     />
                 </div>
                 <div className="form-group">
                     <label htmlFor="age">Age:</label>
                     <input
                         type="number"
-                        id="age"
+                        name="age"
                         value={persInfo.age}
-                        onChange={(e) => setPersInfo({ ...persInfo, age: e.target.value })}
+                        onChange={handleInputChange}
                     />
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
                     <input
                         type="email"
-                        id="email"
+                        name="email"
                         value={persInfo.email}
-                        onChange={(e) => setPersInfo({ ...persInfo, email: e.target.value })}
+                        onChange={handleInputChange}
                     />
                 </div>
                 <button type="submit">Submit</button>
