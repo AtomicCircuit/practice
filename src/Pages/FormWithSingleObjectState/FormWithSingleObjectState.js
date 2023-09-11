@@ -12,8 +12,10 @@ function FormWithSingleObjectState() {
     })
     const [display, setDisplay] = useState('');
 
-    const handleInputChange=(e)=>{
-setPersInfo({...persInfo,[e.target.name]:e.target.value})
+    const handleInputChange = (e) => {
+        setPersInfo((prevState)=>{
+           return { ...prevState, [e.target.name]: e.target.value };
+        })
     }
 
     // Function to handle form submission
