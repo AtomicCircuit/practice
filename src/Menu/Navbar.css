@@ -1,0 +1,56 @@
+/* menuStyles.css */
+
+/* Style the main navigation */
+nav {
+	font-family: Arial, sans-serif;
+  }
+  
+  /* Style the top-level menu items */
+  nav ul {
+	list-style: none;
+	padding: 0;
+  }
+  
+  nav li {
+	display: inline-block;
+	margin-right: 20px;
+	position: relative;
+  }
+  
+  nav a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+  }
+  
+  /* Style the submenus */
+  nav ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+  }
+  
+  nav ul ul li {
+	display: block;
+	margin: 0;
+  }
+  
+  /* Style the links within submenus */
+  nav ul ul a {
+	padding: 10px;
+	display: block;
+	color: #333;
+	text-decoration: none;
+  }
+  
+  /* Hover effect for top-level menu items */
+  nav li:hover ul {
+	display: block;
+  }
+  
+  /* Add more styles as needed */
+  
