@@ -4,6 +4,8 @@ import FormWithSingleObjectState from './Pages/FormWithSingleObjectState/FormWit
 import FormWithBool from './Pages/FormWithBool/FormWithBool';
 import ParentComponent from './Pages/DataFromChildToParent/ParentComponent';
 import ReverseString from './Algo/ReverseString';
+import Sets from './Algo/Sets/Sets';
+import JavascriptConcepts from './JavascriptConcepts/JavascriptConcepts'
 import Home from './Pages/Home/Home';
 import { Route, Routes } from 'react-router-dom';
 import DynamicMenu from './Menu/DynamicMenu';
@@ -21,6 +23,8 @@ function App() {
       <Route path='/Forms/FormWithBool' element={<FormWithBool/>}></Route>
       <Route path='/ParentComponent' element={<ParentComponent/>}></Route>
       <Route path='/algo/ReverseString' element={<ReverseString/>}></Route>
+      <Route path='/algo/Sets/Sets' element={<Sets/>}></Route>
+      <Route path='/JavascriptConcepts' element={<JavascriptConcepts/>}></Route>
     </Routes>
     </>
   );

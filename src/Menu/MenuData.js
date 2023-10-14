@@ -26,12 +26,20 @@ export const menuData = [
       path: '/ParentComponent',
     },
     {
+      label: 'Javascript Concepts',
+      path: '/JavascriptConcepts',
+    },
+    {
       label: 'Algo',
       path: '/algo',
       children: [
         {
           label: 'Seperate State',
           path: '/algo/ReverseString',
+        },
+        {
+          label: 'Sets and Maps',
+          path: '/algo/Sets/Sets',
         },
       ],
     },
